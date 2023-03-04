@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Restaurant page",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeitlerT/restaurant-page.git"
+  },
+  "author": "Tyler Weitler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeitlerT/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/WeitlerT/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

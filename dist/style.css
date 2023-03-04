@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#header {
+    background-color: lightblue;
+    border: 1px solid black;
+    display: grid;
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+#header-ul {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    font-size: 25px;
+}
+
+#content {
+    border: 1px solid red;
+    flex: 1;
+}

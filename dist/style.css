@@ -1,8 +1,15 @@
+* {
+    --module-background-color: rgba(49, 47, 47, 0.493);
+    --header-footer-color: #ececec;
+    --module-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 body {
     margin: 0px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Bitter', serif;
 }
 
 ul {
@@ -10,13 +17,16 @@ ul {
     padding: 0px;
 }
 
+/* HEADER/CONTENT/FOOTER */
 #header {
-    background-color: lightblue;
-    border: 1px solid black;
+    background-color: var(--header-footer-color);
+    z-index: 1;
+    box-shadow:rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     display: grid;
     padding-left: 10px;
     padding-right: 10px;
     grid-template-columns: 1fr 1.5fr;
+    font-style: italic;
 }
 
 #header-ul {
@@ -27,7 +37,92 @@ ul {
     font-size: 25px;
 }
 
+.home-link, .menu-link, .contact-link {
+    transition: 0.5s;
+}
+
+.home-link.active, .menu-link.active, .contact-link.active {
+    text-decoration: underline;
+    color: green;
+}
+
+.home-link:hover, .menu-link:hover, .contact-link:hover {
+    color: green;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 #content {
-    border: 1px solid red;
+    background-color: #34865d;
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer {
+    background-color: var(--header-footer-color);
+    display: flex;
+    justify-content: center;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ALL MODULES */
+.contact, .menu, .home {
+    color: white;
+    font-size: 20px;
+    background-color: var(--module-background-color);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: var(--module-shadow);
+}
+
+/* CONTACT MODULE */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-header {
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+.contact p {
+    justify-self: center;
+}
+
+.contact img {
+    width: 90%;
+    margin-bottom: 20px;
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+.open-times {
+    grid-column: 1/3;
+    font-weight: bold;
+}
+
+/* MENU MODULE */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.menu-header {
+    grid-column: 1/3;
+    justify-self: center;
+}
+
+.menu-item {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: var(--module-background-color);
 }
